@@ -53,5 +53,6 @@ func TestListEntries(t *testing.T) {
 	require.Len(t, entries, 5)
 	for _, entry := range entries {
 		require.NotEmpty(t, entry)
+		require.Equal(t, arg.AccountID, entry.AccountID)
 	}
 }
